@@ -1,0 +1,32 @@
+@import "neat-helpers";
+
+// grid settings
+//$column: 90px;
+$gutter: 0.6em;
+//$grid-columns: 10;
+//$max-width: 1200px;
+// breakpoints
+$tiny-scr-max: 539px;
+$small-scr-min: $tiny-scr-max + 1;
+$small-scr-max: 639px;
+$medium-scr-min: $small-scr-max + 1;
+$medium-scr-max: 1024px;
+$large-scr-min: $medium-scr-max + 1;
+$large-scr-max: 1440px;
+$xlarge-scr-min: $large-scr-max + 1;
+$xlarge-scr-max: 1920px;
+$xxlarge-scr-min: $xlarge-scr-max + 1;
+
+$portrait-phone-max: new-breakpoint('max-width' $tiny-scr-max);
+$album-phone-min: new-breakpoint('min-width' $small-scr-min);
+$album-phone-max: new-breakpoint('max-width' $small-scr-max);
+$tablet-min: new-breakpoint('min-width' $medium-scr-min);
+$tablet-max: new-breakpoint('max-width' $medium-scr-max);
+$tablet: new-breakpoint('min-width' $medium-scr-min 'max-width' $medium-scr-max);
+$notebook-min: new-breakpoint('min-width' $large-scr-min);
+$notebook-max: new-breakpoint('max-width' $large-scr-max);
+$notebook: new-breakpoint('min-width' $large-scr-min 'max-width' $large-scr-max);
+$desktop-min: new-breakpoint('min-width' $xlarge-scr-min);
+$desktop-max: new-breakpoint('max-width' $xlarge-scr-max);
+$desktop: new-breakpoint('min-width' $xlarge-scr-min 'max-width' $xlarge-scr-max);
+$big-desktop-min: new-breakpoint('min-width' $xxlarge-scr-min);

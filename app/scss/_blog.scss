@@ -1,0 +1,139 @@
+.blog1{
+  @include outer-container(100%);
+  }
+.static-content-img{
+  display: block;
+  position: fixed;
+  max-width: initial;
+  height: 100%;
+  }
+.blog1-post-wrap, .sidebar, .singlepost{
+  @include span-columns(10);
+  @include shift(1);
+  }
+.blog-post {
+  background: $white-color;
+  }
+.blog .blog-post {
+  width: 100%;
+  padding: 0.6rem;
+  box-shadow: $base-shadow;
+  }
+.blog1 .blog-post {
+  position: relative;
+  margin-bottom: 0.6rem;
+  padding: 0.6rem;
+  .blog-content {
+    padding: 0.6rem 0;
+    }
+  }
+.blog-content {
+  padding: 0.6rem;
+  .blog-title {
+    margin-bottom: 0.6rem;
+    }
+  .blog-text {
+    margin-bottom: 0.6rem;
+    }
+  }
+.blog-meta {
+  border-top: 1px dashed $font-color;
+  padding-top: 0.6rem;
+  >li {
+    display: inline-block;
+    margin-right: 0.6rem;
+    font-size: 0.7rem;
+    i {
+      font-size: 0.8rem;
+      margin-right: 0.3rem;
+      }
+    }
+  }
+.singlepost {
+  background: $white-color;
+  position: relative;
+  padding: 0.6rem;
+  box-shadow: $base-shadow;
+  }
+.comment-count, .comment-leave{
+  display: inline-block;
+  color: $white-color;
+  background: $main-color;
+  text-transform: uppercase;
+  padding: 0.6rem 1rem;
+  margin: 2rem 0;
+  }
+.single-comment{
+  @include outer-container(100%);
+  .single-comment-avatar{
+    @include span-columns(2);
+    }
+  .single-comment-content{
+    @include span-columns(10);
+    .single-comment-info{
+      color: $black-color;
+      margin-bottom: 0.3rem;
+      .single-comment-meta{
+        font-size: 0.7rem;
+        margin-left: 0.6rem;
+        color: $main-color;
+        }
+      }
+    }
+  }
+.sidebar {
+  position: relative;
+  }
+.widget {
+  background: $white-color;
+  box-shadow: $base-shadow;
+  padding: 1rem;
+  margin-bottom: 0.6rem;
+  }
+.popular-widget-blog{
+  margin-bottom: 0.6rem;
+  @include outer-container(100%)
+  }
+.widget-title {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  }
+.widget-blog-img{
+  @include span-columns(3);
+  img{
+    width: 100%;
+    }
+  }
+.widget-blog-content{
+  @include span-columns(9);
+  }
+.widget-blog-title {
+  display: block;
+  margin-bottom: 0.6rem;
+  }
+@include media($tablet-min){
+  .blog .blog-post {
+    width: 50%;
+    }
+  .blog1-post-wrap, .sidebar, .singlepost {
+    @include shift(0);
+    }
+  .blog1-post-wrap, .singlepost {
+    @include span-columns(6);
+    }
+  .sidebar {
+    @include span-columns(4);
+    }
+  }
+@include media($notebook-min){
+  .static-content-img {
+    width: 100%;
+    height: auto;
+    }
+  .blog .blog-post {
+    width: 25%;
+    }
+  .sidebar {
+    @include span-columns(3);
+    }
+  }

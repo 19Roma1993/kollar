@@ -1,0 +1,107 @@
+.single-project-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  &.active {
+    transform: translateX(0);
+    }
+  }
+.single-project-description, .single-project-controls{
+  z-index: 3;
+  }
+.single-project-description {
+  margin: 2rem 1rem;
+  padding: 1rem;
+  background: $black-color;
+  .title {
+    color: $white-color;
+    margin-bottom: 0.5rem;
+    }
+  .text {
+    color: $white-color;
+    line-height: 1.5;
+    }
+  }
+.single-project-controls {
+  margin: 2rem 1rem;
+  }
+.controls-icon, .single-project-close{
+  vertical-align: middle;
+  font-size: 3rem;
+  color: $white-color;
+  }
+.controls-desc{
+  vertical-align: middle;
+  color: $white-color;
+  }
+.single-project-prev, .single-project-next, .single-project-close {
+  background: $black-color;
+  padding: 0 0.5rem;
+  border: 3px solid $white-color;
+  display: inline-block;
+  margin-left: 0.5rem;
+  transition: opacity 0.2s linear;
+  &:hover {
+    opacity: 0.8;
+    }
+  }
+.single-project-prev {
+  .controls-icon{
+    margin-right: 0.5rem;
+    }
+  }
+.single-project-next {
+  .controls-icon{
+    margin-left: 0.5rem;
+    }
+  }
+.single-project-close {
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  &:active, &:focus, &:hover {
+    color: $white-color;
+    }
+  }
+.single-project-carousel{
+  width: 100%;
+  cursor: pointer;
+  .slides>li{
+    position: relative;
+    }
+  .carousel-caption{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+    background: $shadow-color;
+    color: $white-color;
+    }
+  }
+@include media($tablet-min){
+  .single-project-wrap {
+    position: fixed;
+    }
+  .single-project-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 50%;
+    }
+  .single-project-controls {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 50%;
+    }
+  .single-project-carousel{
+    position: absolute;
+    bottom: 2%;
+    }
+  }
+@include media($notebook-min){
+  .single-project-slider .slides>li{
+    height: 100vh;
+    }
+  }

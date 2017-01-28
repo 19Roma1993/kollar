@@ -1,0 +1,75 @@
+.contact-content {
+  position: absolute;
+  padding-bottom: 5rem;
+  overflow: hidden;
+  height: auto;
+  min-height: 100%;
+  }
+#map {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  }
+.contact-info, .contact-form-wrap{
+  position: relative;
+  transition: transform 0.8s ease-in-out;
+  width: 70%;
+  left: 50%;
+  margin-top: 5rem;
+  transform: translateX(-50%);
+  background: $white-color;
+  box-shadow: 0 1px 7px $shadow-color;
+  .title {
+    color: $white-color;
+    padding: 0.7rem 0.8rem;
+    background: $main-color;
+    position: absolute;
+    transform: translateY(-100%);
+    }
+  }
+.contact-info {
+  &.active {
+    transform: translate(100%, 100%);
+    }
+  .info-item {
+    padding: 1rem;
+    border-bottom: $base-border;
+    }
+  }
+.contact-form-wrap {
+  &.active {
+    transform: translate(100%, -100%);
+    }
+  .contact-form {
+    padding: 1rem;
+    }
+  }
+.contact-switcher {
+  position: fixed;
+  display: block;
+  top: 50%;
+  left: 0;
+  color: $white-color;
+  text-transform: uppercase;
+  text-align: center;
+  background: $gray-color;
+  padding: 1rem;
+  opacity: 0.5;
+  transition: opacity .5s ease-in-out;
+  &:hover, &:active, &:focus {
+    color: $white-color;
+    }
+  &:hover {
+    opacity: 1;
+    }
+  .contact-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    }
+  }
+@include media($album-phone-max){
+  .contact-info, .contact-form-wrap {
+    width: 90%;
+    }
+  }

@@ -1,0 +1,71 @@
+// Breakpoints
+$medium-screen: 600px;
+$large-screen: 900px;
+
+// Typography
+$base-font-family: $font-stack-system;
+$heading-font-family: $base-font-family;
+
+// Font Sizes
+$base-font-size: 1rem;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1rem;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$blue: #1565c0;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
+
+//  Theme Colors
+$font-color: #646464;
+$main-color: #b2267c;
+$white-color: #fff;
+$gray-color: #3e3e3e;
+$black-color: #000;
+$border-color: rgba(0, 0, 0, 0.1);
+$shadow-color: rgba(0, 0, 0, 0.2);
+
+//  Project-list size 16/9
+$project-width: 100%;
+$project-height: 56.25vw;
+
+
+// Font Colors
+$base-font-color: $font-color;
+$action-color: $main-color;
+
+// Border
+$base-border-color: $border-color;
+$base-border: 1px solid $base-border-color;
+$base-shadow: 0 1px 7px $shadow-color;
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
+
+$padding-test:(10px 20px 30px 0);
+
+$bourbon: (
+  "contrast-switch-dark-color": #000,
+  "contrast-switch-light-color": #fff,
+  "global-font-file-formats": ("ttf", "woff2", "woff"),
+  "modular-scale-base": 1rem,
+  "modular-scale-ratio": $major-third,
+  "rails-asset-pipeline": false,
+) !global;

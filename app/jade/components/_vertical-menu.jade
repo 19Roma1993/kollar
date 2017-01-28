@@ -1,0 +1,33 @@
+.menu
+	a.menu-logo(href='/')
+		img(alt='', src='images/logo.png')
+	span.menu-icon.zmdi.zmdi-menu
+	ul.menu-item
+		block filter
+		li
+			a.menu-item-link.active(href='/')
+				i.menu-item-icon.zmdi.zmdi-home
+				span.menu-item-title Home
+		li.main-list
+			a.menu-item-link(href='blog.html')
+				i.menu-item-icon.zmdi.zmdi-comment-outline
+				span.menu-item-title Blog
+			ul.sub-list
+				li
+					a.menu-item-link(href='blog.html') Blog4
+				li
+					a.menu-item-link(href='blog1.html') Blog1
+				li
+					a.menu-item-link(href='singlepost.html') Single Post
+		li
+			a.menu-item-link(href='gallery.html')
+				i.menu-item-icon.zmdi.zmdi-image-o
+				span.menu-item-title Gallery
+		li
+			a.menu-item-link(href='contacts.html')
+				i.menu-item-icon.zmdi.zmdi-phone
+				span.menu-item-title Contact
+	.social-icons
+		a.icon-twitter.menu-item-icon(href='#')
+		a.icon-googleplus.menu-item-icon(href='#')
+		a.icon-facebook.menu-item-icon(href='#')
